@@ -1,0 +1,4 @@
+@EndUserText.label: 'SERVICE DEFINITIONS'
+define service ZSERVICE_DEF {
+  expose ZDD_CM_MASTER;
+}

@@ -1,0 +1,21 @@
+managed implementation in class zbp_dd_cm_master unique;
+strict ( 1 );
+
+define behavior for ZDD_CM_MASTER alias master
+persistent table ztab_cm_master
+lock master
+authorization master ( instance )
+//etag master <field_name>
+
+
+{
+field ( readonly, numbering : managed ) salesorganization;
+
+  create;
+  update;
+  delete;
+
+  validation validateCustomer on save  { field cm_id; }
+  //validation validateCustomer2 on save { field salesorganization; }
+
+}
